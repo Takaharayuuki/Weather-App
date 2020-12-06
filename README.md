@@ -1,4 +1,4 @@
-# Quasar App (WeatherApp)
+# WeatherApp
 
 A Quasar Framework app
 
