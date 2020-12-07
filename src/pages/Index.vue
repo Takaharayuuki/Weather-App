@@ -23,22 +23,40 @@
         </template>
       </q-input>
     </div>
-    <div class="col text-white text-center">
-      <div class="text-h4 text-weight-light">
-        Saitama
-      </div>
-      <div class="text-h6 text-weight-light">
-        Sunny
-      </div>
-      <div class="text-h1 text-weight-thin q-my-lg relative-position">
-        <span>8</span>
-        <span class="text-h4 relative-position degree">&deg;</span>
-      </div>
-    </div>
 
-    <div class="col text-center">
-      <img src="https://www.fillmurray.com/100/100" alt="Bill">
-    </div>
+    <template v-if="weatherData">
+      <div class="col text-white text-center">
+        <div class="text-h4 text-weight-light">
+          Saitama
+        </div>
+        <div class="text-h6 text-weight-light">
+          Sunny
+        </div>
+        <div class="text-h1 text-weight-thin q-my-lg relative-position">
+          <span>8</span>
+          <span class="text-h4 relative-position degree">&deg;</span>
+        </div>
+      </div>
+
+      <div class="col text-center">
+        <img src="https://www.fillmurray.com/100/100" alt="Bill">
+      </div>
+    </template>
+
+    <template v-else>
+      <div class="col column text-center text-white">
+        <div class="col text-h2 text-weight-thin">
+          Weather<br>App
+        </div>
+        <q-btn class="col" flat>
+          <q-icon
+            left
+            size="3em"
+            name="my_location" />
+          <div>Find my location</div>
+        </q-btn>
+      </div>
+    </template>
 
     <div class="col skyline">
 
@@ -51,10 +69,11 @@ export default {
   name: 'PageIndex',
   data() {
     return {
-      search:''
+      search:'',
+      weatherData: null
     }
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss" scoped>
