@@ -7,7 +7,8 @@
         label="Search"
         borderless >
         <template v-slot:before>
-          <q-icon name="my_location" />
+          <q-icon name="my_location"
+                  @click="getLocation" />
         </template>
 
         <template v-slot:hint>
@@ -48,7 +49,10 @@
         <div class="col text-h2 text-weight-thin">
           Weather<br>App
         </div>
-        <q-btn class="col" flat>
+        <q-btn
+          @click="getLocation"
+          class="col"
+          flat>
           <q-icon
             left
             size="3em"
@@ -71,6 +75,13 @@ export default {
     return {
       search:'',
       weatherData: null
+    }
+  },
+  methods: {
+    getLocation() {
+      navigator.geolocation.getCurrentPosition(position => {
+        console.log(position);
+      })
     }
   }
 }
