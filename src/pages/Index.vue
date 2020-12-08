@@ -74,13 +74,25 @@ export default {
   data() {
     return {
       search:'',
-      weatherData: null
+      weatherData: null,
+      lat: null,
+      lon: null,
+      apiUrl: 'http://api.openweathermap.org/data/2.5/weather',
+      apiKey: ''
     }
   },
   methods: {
     getLocation() {
       navigator.geolocation.getCurrentPosition(position => {
-        console.log(position);
+        console.log(position)
+        this.lat = position.coords.latitude
+        this.lon = position.coords.longitude
+        this.getWeatherByCoods()
+      })
+    },
+    getWeatherByCoods() {
+      this.$axios(`${ this.apiUrl }?lat=${ this.lat }&lon=${ this.lon }&appid=${ this.apiKey }&units=metric`).then(response => {
+        console.log(response);
       })
     }
   }
