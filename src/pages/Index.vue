@@ -78,7 +78,7 @@ export default {
       lat: null,
       lon: null,
       apiUrl: 'http://api.openweathermap.org/data/2.5/weather',
-      apiKey: ''
+      apiKey: process.env.VUE_APP_EXEC_MODE,
     }
   },
   methods: {
