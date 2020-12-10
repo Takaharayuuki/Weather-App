@@ -1,8 +1,8 @@
 {
   "name": "weather",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "description": "A Quasar Framework Weather app",
+  "productName": "Weather App",
   "author": "Takaharayuuki <takahara.yuuki22@gmail.com>",
   "private": true,
   "scripts": {
