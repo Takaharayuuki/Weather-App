@@ -1,7 +1,5 @@
 # WeatherApp
 
-A Quasar Framework app
-
 ## Install the dependencies
 ```bash
 npm install
