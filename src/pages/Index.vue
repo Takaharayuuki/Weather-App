@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex column" :class="bgClass">
+  <q-page class="flex column" :class="bgClass" style="min-height: 668px;">
     <div class="col q-pt-lg q-px-md">
      <q-input
         dark
