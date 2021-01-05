@@ -76,5 +76,4 @@
     </platform>
     <allow-navigation href="about:*" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-    <allow-navigation href="http://192.168.3.2:8080" />
 </widget>

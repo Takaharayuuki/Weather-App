@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex column" :class="bgClass" style="min-height: 668px;">
+  <q-page class="flex column" :class="bgClass">
     <div class="col q-pt-lg q-px-md">
      <q-input
         dark
@@ -80,7 +80,7 @@ export default {
       lat: null,
       lon: null,
       apiUrl: 'http://api.openweathermap.org/data/2.5/weather',
-      apiKey: process.env.VUE_APP_EXEC_MODE,
+      apiKey: '35d6476cda4fd20be5023b1c2b4d0b3b',
     }
   },
   methods: {
